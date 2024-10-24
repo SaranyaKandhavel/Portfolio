@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saranya's Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(45deg, #151515, #403f3f);
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        nav {
+            background-color: #1e1d1d;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #414040;
+        }
+
+        /* Welcome Section */
+        #welcome {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #f4f4f4; /* Matching the Projects section background */
+            color: rgb(12, 12, 12);
+        }
+
+        #welcome h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        #welcome p {
+            font-size: 1.2rem;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        #about h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1e1518;
+        }
+
+        #about .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #about p {
+            max-width: 600px;
+            line-height: 1.8;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Portfolio Section */
+        #portfolio {
+            padding: 50px 20px;
+            background-color: #f4f4f4; /* Consistent background color */
+        }
+
+        #portfolio h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1e1918;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #ff7f50;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .portfolio-item h3 {
+            text-align: center;
+            margin: 15px 0;
+            color: #333;
+        }
+
+        .portfolio-item p {
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 50px 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #contact p {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        #contact a {
+            color: white;
+            text-decoration: none;
+            border: 2px solid white;
+            padding: 10px 20px;
+            display: inline-block;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+
+        #contact a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+        #email {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+
+            #about .content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Saranya</h1>
+        <h2>Full Stack Developer</h2>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#welcome">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section id="welcome">
+        <h2>Welcome to My Portfolio</h2>
+        <p>I'm Saranya, a passionate Full Stack Developer dedicated to building responsive, dynamic web applications using modern technologies.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="content">
+            <p>Hello! I'm Saranya, a full-stack developer with experience in both front-end and back-end development. I specialize in creating efficient, scalable web applications. I enjoy turning complex problems into simple, beautiful, and intuitive solutions. My goal is to always learn new technologies and improve my skill set in both programming and software development methodologies.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>My Projects</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <h3>Project 1</h3>
+                <p>A dynamic e-commerce platform built with React.js and Node.js that offers seamless shopping experiences with integrated payment solutions.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Project 2</h3>
+                <p>A custom content management system (CMS) designed using Django, allowing users to easily create, manage, and publish content.</p>
+            </div>
+            <div class="portfolio-item">
+                <h3>Project 3</h3>
+                <p>A real-time chat application developed using Socket.io and Express, enabling users to communicate instantly with WebSocket technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to connect, feel free to reach out!</p>
+        <a href="mailto:saranya@example.com">Send me an email</a>
+        <p id="email">saranya@gmail.com</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Saranya. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
